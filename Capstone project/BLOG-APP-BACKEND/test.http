@@ -1,0 +1,104 @@
+### User Register
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+  "firstName": "Nenavath",
+  "lastName": "Dinesh",
+  "email": "nenavathdinesh.08@gmail.com",
+  "password": "dinesh@123",
+  "profileImageUrl": "https://example.com/avatars/user.png"
+}
+
+### Author Register
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+  "firstName":"dinesh",
+  "lastName":"nenavath",
+  "email":"resume.grader.ai@gmail.com",
+  "password": "resume@123",
+  "profileImageUrl": "sdncscdsb"
+}
+
+### Author Register
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+  "firstName": "test",
+  "lastName": "Author",
+  "email": "test.author@example.com",
+  "password": "testauthor",
+  "profileImageUrl": "https://example.com/avatars/author.png"
+}
+
+
+
+### Login
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+  "email": "resume.grader.ai@gmail.com",
+  "password": "resume@123"
+}
+
+
+### Logout
+GET  http://localhost:4000/common-api/logout
+
+
+
+### Create article (AUTHOR)
+POST http://localhost:4000/author-api/article
+Content-Type: application/json
+
+{
+  "author":"69afe0a84076aff12d3c4a53",
+  "title":"Naruto",
+  "category":"Anime",
+  "content":"this anime is a Ninja related!"
+}
+
+
+
+###Read articles of a author
+GET http://localhost:4000/author-api/articles/698acc809350f1a90ca54e2b
+
+
+
+### Update article (AUTHOR)
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+  "author":"698acc809350f1a90ca54e2b",
+  "articleId":"698accde9350f1a90ca54e31",
+  "title":"test2 article updated",
+  "category":"programming",
+  "content":"content of test2 article updated"
+}
+###
+// block user
+POST http://localhost:4000/admin-api/block
+Content-Type: application/json
+
+{
+  "_id":"698acc809350f1a90ca54e2b"
+}
+
+### Add Comment to an article
+PUT http://localhost:4000/user-api/articles
+Content-Type: application/json
+
+{
+  "user":"698ac61ee2b5db46f433e099",
+  "articleId":"698accde9350f1a90ca54e31",
+  "comment":"Hello"
+}
+
+
+###
+GET http://localhost:4000/author-api/articles
